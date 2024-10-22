@@ -1,5 +1,5 @@
 {% set name = "dxtb" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dxtb-{{ version }}.tar.gz
-  sha256: 2eb1327d74ffc6830476ec9385e3eb461b3cfd753b43cfa0d163d7366476cdbe
+  sha256: f578b2fb9b9ded19c10770ac9c386d5c3afef79f5c3bc403464e99b708d8fff8
 
 build:
   entry_points:
