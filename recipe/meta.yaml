@@ -1,5 +1,5 @@
 {% set name = "dxtb" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dxtb-{{ version }}.tar.gz
-  sha256: 2eb1327d74ffc6830476ec9385e3eb461b3cfd753b43cfa0d163d7366476cdbe
+  sha256: f578b2fb9b9ded19c10770ac9c386d5c3afef79f5c3bc403464e99b708d8fff8
 
 build:
   entry_points:
@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<3.12
+    - python >=3.8,<3.13
     - setuptools
     - pip
   run:
-    - python >=3.8,<3.12
+    - python >=3.8,<3.13
     - numpy <2
     - pydantic >=2.0.0
     - scipy
@@ -32,7 +32,7 @@ requirements:
     - tad-multicharge
     - tomli
     - tomli-w
-    - pytorch >=1.11.0,<2.4
+    - pytorch >=1.11.0,<3
     - typing-extensions
 
 test:
