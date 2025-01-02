@@ -1,12 +1,13 @@
 {% set name = "dxtb" %}
 {% set version = "0.1.1" %}
+{% set python_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dxtb-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dxtb-{{ version }}.tar.gz
   sha256: f578b2fb9b9ded19c10770ac9c386d5c3afef79f5c3bc403464e99b708d8fff8
 
 build:
@@ -14,15 +15,15 @@ build:
     - dxtb = dxtb._src.cli:console_entry_point
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8,<3.13
+    - python {{ python_min }}
     - setuptools
     - pip
   run:
-    - python >=3.8,<3.13
+    - python >={{ python_min }},<3.13
     - numpy <2
     - pydantic >=2.0.0
     - scipy
@@ -32,7 +33,7 @@ requirements:
     - tad-multicharge
     - tomli
     - tomli-w
-    - pytorch >=1.11.0,<3
+    - pytorch >=1.11.0,<2.5
     - typing-extensions
 
 test:
@@ -43,6 +44,7 @@ test:
     - dxtb --version
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   summary: Fully Differentiable Approach to Extended Tight Binding
