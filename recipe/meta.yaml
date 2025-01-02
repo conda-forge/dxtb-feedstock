@@ -1,5 +1,6 @@
 {% set name = "dxtb" %}
 {% set version = "0.1.1" %}
+{% set python_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
@@ -32,7 +33,7 @@ requirements:
     - tad-multicharge
     - tomli
     - tomli-w
-    - pytorch >=1.11.0,<3
+    - pytorch >=1.11.0,<2.5
     - typing-extensions
 
 test:
