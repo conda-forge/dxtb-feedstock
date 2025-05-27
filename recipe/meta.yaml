@@ -1,5 +1,5 @@
 {% set name = "dxtb" %}
-{% set version = "0.1.1" %}
+{% set version = "0.2.0" %}
 {% set python_min = "3.8" %}
 
 package:
@@ -8,14 +8,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dxtb-{{ version }}.tar.gz
-  sha256: f578b2fb9b9ded19c10770ac9c386d5c3afef79f5c3bc403464e99b708d8fff8
+  sha256: 13f98f27a41c84a442c342d55a27f58f0e57ab1e39acdd410f65c01fec9fea28
 
 build:
   entry_points:
     - dxtb = dxtb._src.cli:console_entry_point
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
