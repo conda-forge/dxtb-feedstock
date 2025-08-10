@@ -33,7 +33,7 @@ requirements:
     - tad-multicharge ==0.3.3
     - tomli
     - tomli-w
-    - pytorch >=1.11.0,<2.5
+    - pytorch >=1.11.0,<3
     - typing-extensions
     
 test:
