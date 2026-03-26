@@ -24,6 +24,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
+    - h5py
     - numpy
     - pydantic >=2.0.0
     - scipy
