@@ -23,14 +23,14 @@ requirements:
     - setuptools
     - pip
   run:
-    - python >={{ python_min }},<3.13
-    - numpy <2
+    - python >={{ python_min }}
+    - numpy
     - pydantic >=2.0.0
     - scipy
-    - tad-dftd3 ==0.5.0
-    - tad-dftd4 ==0.7.0
-    - tad-mctc ==0.5.3
-    - tad-multicharge ==0.3.3
+    - tad-dftd3 ==0.6.0
+    - tad-dftd4 ==0.8.0
+    - tad-mctc ==0.7.0
+    - tad-multicharge ==0.5.0
     - tomli
     - tomli-w
     - pytorch >=1.11.0,<3
